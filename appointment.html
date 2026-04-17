@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Style N Glow Beauty Salon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-spa"></i>
+                    <span>Style N Glow</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="appointment.html" class="nav-link active">Book Now</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+            <p>Reserve Your Slot for Luxury Beauty Services</p>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-content">
+                <div class="appointment-form-wrapper">
+                    <h2>Schedule Your Visit</h2>
+                    <form class="appointment-form" id="appointmentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Select Service *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Choose a service</option>
+                                    <option value="bridal">Bridal Makeup</option>
+                                    <option value="facial">Facial Treatments</option>
+                                    <option value="makeup">Makeup Services</option>
+                                    <option value="hair">Hair Care & Styling</option>
+                                    <option value="body">Body Treatments</option>
+                                    <option value="nails">Nail Art & Pedicure</option>
+                                    <option value="threading">Threading & Waxing</option>
+                                    <option value="skincare">Skincare Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="10:30">10:30 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="01:00">1:00 PM</option>
+                                    <option value="01:30">1:30 PM</option>
+                                    <option value="02:00">2:00 PM</option>
+                                    <option value="02:30">2:30 PM</option>
+                                    <option value="03:00">3:00 PM</option>
+                                    <option value="03:30">3:30 PM</option>
+                                    <option value="04:00">4:00 PM</option>
+                                    <option value="04:30">4:30 PM</option>
+                                    <option value="05:00">5:00 PM</option>
+                                    <option value="05:30">5:30 PM</option>
+                                    <option value="06:00">6:00 PM</option>
+                                    <option value="06:30">6:30 PM</option>
+                                    <option value="07:00">7:00 PM</option>
+                                    <option value="07:30">7:30 PM</option>
+                                    <option value="08:00">8:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Additional Notes</label>
+                            <textarea id="message" name="message" placeholder="Any special requests or additional information..." rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Book Appointment</button>
+                    </form>
+                    <p class="form-note" id="formMessage"></p>
+                </div>
+
+                <div class="appointment-info">
+                    <h2>Appointment Information</h2>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Operating Hours</h4>
+                        <p>Monday - Sunday<br>10:00 AM - 8:00 PM</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Call to Confirm</h4>
+                        <p><a href="tel:+919819558892">+91 9819558892</a><br>
+                        <a href="tel:+917977579522">+91 7977579522</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Sec 35 E, Shop 4, SR Park Building<br>Kharghar, Navi Mumbai<br>Maharashtra - 410210</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h4>Important Notes</h4>
+                        <ul>
+                            <li>Please arrive 10 minutes early</li>
+                            <li>Cancellations 24 hours in advance</li>
+                            <li>Free parking available</li>
+                            <li>Hygienic & sanitized environment</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card special">
+                        <i class="fas fa-star"></i>
+                        <h4>Special Offer</h4>
+                        <p>First-time customers get <strong>15% discount</strong> on all services!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Book With Us -->
+    <section class="why-book">
+        <div class="container">
+            <h2 class="section-title">Why Book With Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-check-double"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Simple and quick appointment booking process</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Guaranteed</h3>
+                    <p>We ensure best results and satisfaction</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Expert Professionals</h3>
+                    <p>Certified and experienced beauty experts</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Always ready to help you with inquiries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Style N Glow Beauty Salon</h4>
+                    <p>Luxury beauty services for the modern woman</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><a href="tel:+919819558892">+91 9819558892</a></p>
+                    <p><a href="tel:+917977579522">+91 7977579522</a></p>
+                    <p><a href="mailto:Binaltparmar@gmail.com">Binaltparmar@gmail.com</a></p>
+                </div>
+            </div>
+            <p>&copy; 2026 Style N Glow Beauty Salon. All rights reserved. ✨</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
