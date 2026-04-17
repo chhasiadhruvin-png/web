@@ -17,18 +17,35 @@ if (hamburger) {
     });
 }
 
+// EmailJS Setup
+emailjs.init("YOUR_PUBLIC_KEY");
+
 // Appointment Form Handling
 const appointmentForm = document.getElementById('appointmentForm');
+
 if (appointmentForm) {
     appointmentForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const formMessage = document.getElementById('formMessage');
-        formMessage.textContent = '✓ Appointment booked successfully! We will contact you soon.';
-        formMessage.className = 'form-note success';
-        appointmentForm.reset();
-        setTimeout(() => {
-            formMessage.textContent = '';
-        }, 5000);
+
+        emailjs.sendForm(
+            "YOUR_SERVICE_ID",
+            "YOUR_TEMPLATE_ID",
+            appointmentForm
+        ).then(() => {
+            const formMessage = document.getElementById('formMessage');
+            formMessage.innerHTML =
+                "✅ Appointment booked successfully! We will contact you soon.";
+            formMessage.className = "form-note success";
+            appointmentForm.reset();
+
+            setTimeout(() => {
+                formMessage.textContent = "";
+            }, 5000);
+        }).catch((error) => {
+            console.error(error);
+            document.getElementById('formMessage').innerHTML =
+                "❌ Failed to send booking. Please try again.";
+        });
     });
 }
 
